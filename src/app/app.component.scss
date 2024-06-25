@@ -1,0 +1,10 @@
+.ag-theme-quartz {
+  border: 2px solid black;
+  padding: 10px;
+  width: 100%;
+  height: 500px;
+}
+
+::ng-deep .ag-header-cell:hover {
+  background-color: transparent !important;
+}
