@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="searchBox">
+    <input class="input"  type="text" placeholder="Search Food" [(ngModel)]="searchItem">
+
+    <!-- <button (click)="search()" type="button">Search</button> -->
+</div>
+<app-tag></app-tag>
+<div [ngClass]="object">{{errMsg}}</div>
+
+<ul>
+    <li *ngFor="let item of items | searchPipe: searchItem">
+        <a class="anchor1" routerLink="/food/{{item.id}}">
+            <img class="itemImage" height="170px" src="{{item.image}}" alt="items">
+
+            <div class="content">
+                <div class="headers">
+                    <div class="name">
+                        {{item.itemName}}
+                    </div>
+                    <span id="fav" [style.color]="item.favorite ? 'red' : 'grey' ">♥️</span>
+                </div>
+                <star-rating [value]="item.star" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="22px" [readonly]="true"></star-rating>
+                <div class="product-item-footer">
+                    <div class="header2">
+                        <div class="origins">
+                            <span *ngFor="let origin of item.origins">
+                                🏷️{{origin}}
+                            </span>
+                        </div>
+                        <div class="cook-time">
+                            <span>🕒</span>{{item.cookTime}}
+                        </div>
+                    </div>
+                    <div class="price">
+                        {{item.price | currency: 'INR': 'symbol'}}
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,63 @@
+<div class="loginBox">
+    <div class="bgVideo">
+        <video 
+        src="/assets/production ID_4151824.mp4"
+        class="Video" autoplay loop type="video/mp4">
+        </video>
+    </div>
+    <div class="container">
+        <div class="leftContainer">
+            <p class="header">Welcome to <br> Mr. Fresh Menu</p>
+        </div>
+        <div class="loginForm">
+            <form class="formBox" #userForm="ngForm">
+                <div>
+                    <h2 class="header2">SignUp</h2>
+                </div>
+                <div class="formElements">
+                    <div class="name flexCol">
+                        <input class="inputBox" 
+                        required
+                        minlength="3"
+                        #userName="ngModel" 
+                        [(ngModel)]="loginData.userName" 
+                        [class.is-invalid]="userName.invalid && userName.touched"
+                        type="text" name="userName" placeholder="👤 User Name">
+                        <small id="msg" [class.d-none]="userName.valid || userName.untouched && clsNone">Name is required field and should exceeds 2 characters*</small>
+                    </div>
+                    <div class="phone flexCol">
+                        <input class="inputBox" 
+                        required
+                        pattern="^\d{10}$"
+                        #phone="ngModel" 
+                        [(ngModel)]="loginData.phone" 
+                        [class.is-invalid]="phone.invalid && phone.touched" 
+                        type="tel" name="phone" placeholder="📞 Phone" id="">
+                        <small id="msg" [class.d-none]="phone.valid || phone.untouched && clsNone">Enter your phone number, should be 10 digits*</small>
+                    </div>
+                    <div class="email flexCol">
+                        <input class="inputBox" 
+                        required 
+                        #email="ngModel" 
+                        [(ngModel)]="loginData.email" 
+                        [class.is-invalid]="email.invalid && email.touched" 
+                        type="email" name="email" placeholder="📧 Enter Email">
+                        <small id="msg" [class.d-none]="email.valid || email.untouched && clsNone">Enter your EmailID*</small>
+                    </div>
+                    <div class="password flexCol">
+                        <input class="inputBox" 
+                        required 
+                        #password="ngModel" 
+                        [(ngModel)]="loginData.password" 
+                        [class.is-invalid]="password.invalid && password.touched"
+                        type="password" name="password" placeholder="🔐 Password">
+                        <small id="msg" [class.d-none]="password.valid || password.untouched && clsNone">Enter your password*</small>
+                    </div>
+                    <div class="signup">
+                        <button class="signUpBtn" #button type="submit" (click)="onSignUp(userForm.value)">SignUp</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

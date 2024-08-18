@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="body" *ngFor="let item of items">
+    <div class="container">
+        <img class="itemImage" src="{{item.image}}" alt=".item.itemName">
+
+        <div class="details">
+            <div class="header">
+                <span class="name">
+                    {{item.itemName}}
+                </span>
+                <span (click)="onFavClick()" id="fav" [ngClass]="favClass">
+                    ♥️
+                </span>
+            </div> 
+            <div class="star">
+                <star-rating [value]="item.star" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="27px" [readonly]="true"></star-rating>
+            </div>
+
+            <div class="origins">
+                <span *ngFor="let origin of item.origins">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>{{origin}}
+                </span>
+            </div>
+
+            <div class="tagNdTime">
+                <div class="tags">
+                    <span class="tag" *ngFor="let tag of item.tags">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag-fill" viewBox="0 0 16 16">
+                        <path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                        </svg>
+                        {{tag}}
+                    </span>
+                </div>
+                
+                <div class="cook-time">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stopwatch-fill" viewBox="0 0 16 16">
+                        <path d="M6.5 0a.5.5 0 0 0 0 1H7v1.07A7.001 7.001 0 0 0 8 16a7 7 0 0 0 5.29-11.584.531.531 0 0 0 .013-.012l.354-.354.353.354a.5.5 0 1 0 .707-.707l-1.414-1.415a.5.5 0 1 0-.707.707l.354.354-.354.354a.717.717 0 0 0-.012.012A6.973 6.973 0 0 0 9 2.071V1h.5a.5.5 0 0 0 0-1h-3zm2 5.6V9a.5.5 0 0 1-.5.5H4.5a.5.5 0 0 1 0-1h3V5.6a.5.5 0 1 1 1 0z"/>
+                    </svg>
+                    {{item.cookTime}}
+                </div>
+            </div>
+            
+            <div class="price">
+                {{item.price | currency: 'INR': 'symbol' }}
+            </div>
+            
+            <button (click)="addToCart()" class="cartBtn">Add to Cart</button>
+        </div>
+    </div>
+</div>

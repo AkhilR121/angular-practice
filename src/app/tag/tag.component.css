@@ -1,0 +1,29 @@
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div a{
+    text-decoration: none;
+    margin: 10px;
+    background: rgb(251, 98, 128);
+    color: black;
+    padding: 7px 10px 7px 10px;
+    border-radius: 30px;
+    font-weight: 900;
+    font-size: 1rem;
+    margin-top: 30px;
+    margin-bottom: -5px;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 0.3s ease-in-out;
+}
+div a:hover {
+    transition: all 0.3s ease-in-out;
+    color: white;
+    background-color: crimson;
+}

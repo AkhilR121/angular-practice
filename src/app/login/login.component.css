@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.drop{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eff0f4;
+    width: 100%;
+    height: 100%;
+}
+
+.drop .container{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    box-shadow: inset 20px 20px 20px rgba(0,0,0,0.05),
+                25px 35px 20px rgba(0,0,0,0.05),
+                25px 30px 30px rgba(0,0,0,0.05),
+                inset -20px -20px 25px rgba(255,255,255,0.9);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50% 50% 66% 34% / 30% 45% 55% 70% ;
+}
+.drop .container:hover{
+    border-radius: 50%;
+}
+
+.drop .container::after{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.9;
+}
+
+.header{
+    text-shadow: 4px 3px 3px black;
+    text-align: center;
+    color: crimson;
+    font-weight: 900;
+    margin: 10px;
+}
+
+.loginBox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.textInput{
+    font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    /* box-shadow: inset 20px 20px 20px rgba(0,0,0,0.05),
+                25px 35px 20px rgba(0,0,0,0.05),
+                25px 30px 30px rgba(0,0,0,0.05),
+                inset -20px -20px 25px rgba(255,255,255,0.9); */
+    width: 20rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-radius: 25px;
+    padding: 10px;
+    border-bottom: 3px solid black;
+}
+
+.buttons{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.btnComs{
+    margin: 5px;
+    background: none;
+    border: none;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50px;
+    transition: 0.5s;
+    border: 3px solid black;
+}
+.loginBtn{
+    background-color: rgb(63, 122, 103);
+}
+.cancelBtn{
+    background-color: crimson;
+}
+
+.loginBtn:hover{
+    box-shadow: rgb(44, 86, 73) 0px 5px 15px;
+    color: white;
+    background-color: rgb(44, 86, 73);
+}
+.cancelBtn:hover{
+    box-shadow: rgb(163, 14, 44) 0px 5px 15px;
+    color: white;
+    background-color: rgb(163, 14, 44);
+}
+.signUp{
+    position: absolute;
+    right: 500px;
+    bottom: 50px;
+    width: 120px;
+    height: 120px;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.2em;
+    transition: 0.25s;
+    box-shadow: inset 10px 10px 10px rgba(190,1,254,0.05),
+                15px 25px 10px rgba(190,1,254,0.1),
+                15px 20px 20px rgba(190,1,254,0.1),
+                inset -10px -10px 15px rgba(255,255,255,0.5);
+    border-radius: 37% 63% 70% 30% / 54% 54% 46% 46%;
+}
+.signUp:hover{
+    border-radius: 50%;
+}
+.signUp::before{
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.45;
+}
+
+.textIcons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.text{
+    /* display: flex;
+    justify-content: center; */
+    font-size: 14px;
+    margin-bottom: -10px;
+}
+
+.icon svg{
+    margin-left: 4px;
+}
+
+.flexInput{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+}
+#msg{
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 700;
+    color: crimson;
+    margin-left: 10px;
+    position: absolute;
+    text-shadow: 1px 1px 2px crimson;
+}
+
+.is-invalid{
+    box-shadow: rgba(220, 20, 60, 0.256) 0px 30px 60px -12px inset, rgba(220, 20, 60, 0.256) 0px 18px 36px -18px inset;
+}
+
+.invalidMsg{
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 700;
+    color: crimson;
+    position: absolute;
+    padding-left: 50px;
+    text-shadow: 1px 1px 2px crimson;
+    top: 6.2rem;
+}
+
