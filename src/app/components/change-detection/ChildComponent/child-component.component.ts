@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+// import { UserModel } from '../../../models/changeDetectoin-model';
 
 @Component({
 	selector: 'app-child-component',
@@ -6,8 +7,8 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 	imports: [],
 	templateUrl: './child-component.component.html',
 	styleUrl: './child-component.component.css',
-	// changeDetection: ChangeDetectionStrategy.OnPush,
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChildComponentComponent {
-	@Input() user: any
+	@Input() user: any;
 }
