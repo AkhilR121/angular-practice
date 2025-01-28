@@ -3,7 +3,7 @@ import { CounterComponent } from './components/counter/counter.component';
 import { ApiServiceComponent } from './components/api-service/api-service.component';
 import { RootComponent } from './components/root/root.component';
 import { ChangeDetectionComponent } from './components/change-detection/change-detection.component';
-import { WorkflowManagerComponent } from './components/workflow-manager/workflow-manager/workflow-manager.component';
+import { WorkflowManagerComponent } from './components/workflow-manager/workflow-manager.component';
 
 export const routes: Routes = [
 	{ path: '', redirectTo: 'root', pathMatch: 'full' },
