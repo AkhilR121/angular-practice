@@ -1,0 +1,131 @@
+[
+  {
+    "opportunity_id": "C42E111AC7D5474BB09099097B6B227A",
+    "opportunity_req_json": {},
+    "status": "IN_PROGRESS",
+    "client_id": "fred",
+    "create_date": "2024-06-11 09:10:56.000",
+    "update_timestamp": "2024-06-11 09:10:56.000",
+    "workflow_type": null
+  },
+  {
+    "opportunity_id": "A98D111DC7D5474BB09099097A2E421B",
+    "opportunity_req_json": {
+      "opportunityId": "a98d111d-c7d5-474b-b090-99097a2e421b",
+      "clientId": "alpha",
+      "clientMetadata": null,
+      "broker": {
+        "companyId": "2-58K98C",
+        "companyName": "Alpha Solutions, LLC",
+        "sales": {
+          "firstName": "Alice",
+          "lastName": "Cooper",
+          "email": "alice.cooper@alphasolutions.com"
+        },
+        "analyst": {
+          "firstName": "Tom",
+          "lastName": "Hanks",
+          "email": "tom.hanks@alphasolutions.com"
+        }
+      },
+      "customer": {
+        "name": "Tech Innovators Inc.",
+        "legalEntityName": "Tech Innovators Inc.",
+        "dunsNumber": "545678432",
+        "dba": "Tech Inn",
+        "industry": "Technology",
+        "generalPartnerName": "John Doe",
+        "addresses": [
+          {
+            "addressLine1": "123 Tech Blvd",
+            "city": "Austin",
+            "state": "TX",
+            "zip": "73301",
+            "addressType": "Billing"
+          }
+        ],
+        "phoneNumber": {
+          "number": "5121234567",
+          "extension": "100"
+        },
+        "contacts": [
+          {
+            "contactType": "Billing",
+            "firstName": "Jane",
+            "lastName": "Smith",
+            "email": "jane.smith@techinnovators.com",
+            "fax": "5127654321",
+            "phoneNumber": {
+              "number": "5128765432",
+              "extension": "101"
+            },
+            "address": {
+              "addressLine1": "124 Tech Blvd",
+              "city": "Austin",
+              "state": "TX",
+              "zip": "73302",
+              "addressType": "Notice"
+            }
+          }
+        ]
+      },
+      "sites": {
+        "historicalUsageFileUrls": [
+          "https://example.com/file1.xlsx",
+          "https://example.com/file2.csv",
+          "https://example.com/file3.csv"
+        ],
+        "usageLookup": {
+          "loaEmail": "loa@techinnovators.com",
+          "loaFileUrls": ["https://example.com/loa-file.pdf"]
+        },
+        "siteDetails": [
+          {
+            "accountNumber": "20348740002194832",
+            "utility": "TEC",
+            "startDate": "2024-05-01",
+            "address": {
+              "addressLine1": "125 Tech Blvd",
+              "city": "Austin",
+              "state": "TX",
+              "zip": "73303",
+              "addressType": null
+            }
+          }
+        ]
+      },
+      "dealParameters": {
+        "contractStartDate": 1717300000000,
+        "pricingRequestedBy": 1718168000000,
+        "commodityType": "Gas",
+        "productGroups": [
+          {
+            "productType": "Variable Price",
+            "products": [
+              {
+                "term": 24,
+                "brokerFee": "0.50"
+              }
+            ]
+          }
+        ],
+        "notes": "New contract for 2024"
+      },
+      "customWorkflow": []
+    },
+    "status": "PENDING",
+    "client_id": "alpha",
+    "create_date": "2024-06-15 12:00:00.000",
+    "update_timestamp": "2024-06-16 14:15:30.000",
+    "workflow_type": "Standard"
+  },
+  {
+    "opportunity_id": "B87F567BC9E5474BB19088097B3C509C",
+    "opportunity_req_json": {},
+    "status": "COMPLETED",
+    "client_id": "gamma",
+    "create_date": "2024-05-01 08:45:00.000",
+    "update_timestamp": "2024-05-02 10:30:00.000",
+    "workflow_type": "Custom"
+  }
+]
