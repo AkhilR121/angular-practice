@@ -1,0 +1,40 @@
+<main class="user-table">
+    <section>
+        <header class="table-heading flex-between">
+            <span class="heading">
+                User Management
+            </span>
+            <span class="flex-center">
+                <img src="../../../../assets/action_icon.svg" alt="action_icon">
+                <span>Actions</span>
+                <img src="../../../../assets/action_down_icon.svg" alt="action_down_icon">
+            </span>
+        </header>
+        <table>
+            <thead class="table-header">
+                <td>
+
+                </td>
+                <td></td>
+                <td>
+                    <mat-checkbox></mat-checkbox>
+                </td>
+                @for (header of tableHeaders; track $index) {
+                    <td class="table-header-child">{{header.name}}</td>
+                }
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>Hi</td>
+                    <td>Hi</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Hi</td>
+                    <td>Hi</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
