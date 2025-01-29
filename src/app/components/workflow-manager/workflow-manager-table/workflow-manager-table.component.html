@@ -12,24 +12,32 @@
         </header>
         <table>
             <thead class="table-header">
-                <td>
-
+                <td class="search-icon">
+                    <img src="../../../../assets/search_icon.svg" alt="search_icon">
                 </td>
                 <td></td>
                 <td>
                     <mat-checkbox></mat-checkbox>
                 </td>
-                @for (header of tableHeaders; track $index) {
-                    <td class="table-header-child">{{header.name}}</td>
-                }
+                    @for (header of tableHeaders; track $index) {
+                        <td class="table-header-elements">{{header.name}}</td>
+                        @if (header.name === "task status") {
+                           <button>
+                                <img src="../../../../assets/arrow_down.svg" alt="arrow_down">
+                           </button> 
+                        }
+                    }
             </thead>
+            <!-- <input type="text" class="opty-search-box"> -->
             <tbody>
                 <tr>
+                    <td></td>
                     <td></td>
                     <td>Hi</td>
                     <td>Hi</td>
                 </tr>
                 <tr>
+                    <td></td>
                     <td></td>
                     <td>Hi</td>
                     <td>Hi</td>
